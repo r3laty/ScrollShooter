@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class CharacterController : MonoBehaviour
+public class Move : MonoBehaviour
 {
     [HideInInspector] public float DirX;
     
