@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1022063897673355440}
   - component: {fileID: 4560345518014548050}
   - component: {fileID: 5249275949274030802}
+  - component: {fileID: 774938292579592290}
   m_Layer: 0
   m_Name: MagicBall
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7472, y: 1.1473, z: 0.0413}
-  m_LocalScale: {x: 2.4893544, y: 2.4893544, z: 2.4893544}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &774938292579592290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3685436500536862957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63283b2237d7e6478f7afc8175f11de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8.5
+  lifeTime: 1.5
+  damage: 5
+  distanceOfRaycast: 0.8

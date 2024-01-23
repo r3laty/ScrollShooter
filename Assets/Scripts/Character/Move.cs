@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Move : MonoBehaviour
 {
-    [HideInInspector] public float DirX;
+    [HideInInspector] public static float DirX;
     
     [SerializeField] private float scale = 4;
 
@@ -33,10 +33,14 @@ public class Move : MonoBehaviour
         if (DirX > 0)
         {
             transform.localScale = new Vector3(scale, scale, 0);
+            shot.FacingRight = true;
+            shot.FacingLeft = false;
         }
         else if (DirX < 0)
         {
             transform.localScale = new Vector3(-scale, scale, 0);
+            shot.FacingRight = false;
+            shot.FacingLeft = true;
         }
     }
 }

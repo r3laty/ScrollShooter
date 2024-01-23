@@ -15,15 +15,15 @@ public class Animations : MonoBehaviour
     }
     private void Update()
     {
-        if (_controller.DirX > 0)
+        if (Move.DirX > 0)
         {
             _animator.SetBool("IsMoving", true);
         }
-        if (_controller.DirX < 0)
+        if (Move.DirX < 0)
         {
             _animator.SetBool("IsMoving", true);
         }
-        if (_controller.DirX == 0)
+        if (Move.DirX == 0)
         {
             foreach (AnimatorControllerParameter parameter in _animator_parametres)   //Disable all animations
             {
