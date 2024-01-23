@@ -1,8 +1,7 @@
 using UnityEngine;
 
 public class BurningGhoulRuns : MonoBehaviour
-{
-    public int Hp = 30;
+{    
     [SerializeField] private Transform leftLimit;
     [SerializeField] private Transform rightLimit;
     [SerializeField] private float speed;
@@ -11,23 +10,11 @@ public class BurningGhoulRuns : MonoBehaviour
     private bool _goLeft = true;
     private bool _goRight = false;
 
-    private int _currentHp;
-    private void Awake()
-    {
-        _currentHp = Hp;
-    }
     private void Update()
     {
         Patrol();
     }
-    public void TakeDamage(int damage)
-    {
-        _currentHp = damage - _currentHp;
-        if (_currentHp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+
     private void Patrol()
     {
         if (_goLeft)

@@ -742,8 +742,8 @@ TextureImporter:
       physicsShape:
       - - {x: -8, y: -8}
         - {x: 8, y: -8}
-        - {x: 8, y: -1}
-        - {x: -8, y: -1}
+        - {x: 8, y: -3}
+        - {x: -8, y: -3}
       tessellationDetail: 0
       bones: []
       spriteID: 7610082268144784abcad1469a0952cb
@@ -767,8 +767,8 @@ TextureImporter:
       physicsShape:
       - - {x: -8, y: -8}
         - {x: 8, y: -8}
-        - {x: 8, y: -1}
-        - {x: -8, y: -1}
+        - {x: 8, y: -3}
+        - {x: -8, y: -3}
       tessellationDetail: 0
       bones: []
       spriteID: 375e1ec8da5bdd54c8fa45bec2f94019

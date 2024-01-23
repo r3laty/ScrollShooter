@@ -9,6 +9,8 @@ public class Move : MonoBehaviour
 
     [SerializeField] private float speed = 5;
 
+    [SerializeField] private MakeShot shot;
+
     private Rigidbody2D _rb;
     private void Awake()
     {
