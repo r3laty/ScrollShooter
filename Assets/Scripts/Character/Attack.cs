@@ -1,6 +1,8 @@
  using UnityEngine;
 public class Attack : MonoBehaviour
 {
+    public static bool Attacked;
+
     [SerializeField] private Animator animator;
     
     private MakeShot _shot;
@@ -13,12 +15,7 @@ public class Attack : MonoBehaviour
         if (Input.GetButton("Fire1"))
         {
             animator.SetBool("IsSphereAttack", true);
-            
+            Attacked = true;
         }
-        //else if (Input.GetButtonUp("Fire1"))
-        //{
-        //    animator.SetBool("IsSphereAttack", false);
-        //}
-
     }
 }

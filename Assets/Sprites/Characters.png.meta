@@ -501,7 +501,7 @@ TextureImporter:
         width: 30
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,7 +522,7 @@ TextureImporter:
         width: 32
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,6 +530,342 @@ TextureImporter:
       bones: []
       spriteID: 63c9c52c8b8c15d4d89a91450303a312
       internalID: 1790932823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard1
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 138
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf8ceb52ada7b74483ed97a13e0863e
+      internalID: -612452197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard2
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 138
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d7b931f5a7fd7499b1ea885a789f51
+      internalID: 1837285841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard3
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 2
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158142ab4ffd1874f81b33b5e5ed33ba
+      internalID: -948116788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard4
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 2
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6213346de7ae8d943a86bf0b1909c3d9
+      internalID: -47040442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard5
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 2
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdfddc34fbeb3448b8d515cc3e82e66
+      internalID: -1740350079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard6
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 2
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d58567815c428147aaf2cc4d5f60b34
+      internalID: -1328171046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard7
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 2
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4a9b3c0ce365141b2bd5910567dc0e
+      internalID: -1986465593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard8
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 70
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4823e5e298763ca40b4b7b3afde27a31
+      internalID: -959067062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard9
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 70
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda8c9a8f5a005a44baa79d5ff296e92
+      internalID: -277778771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard10
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 70
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288042c3190bd954d9e293efc584d09d
+      internalID: -635889098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard11
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 70
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdce4e252ff533c448e450de10926f9b
+      internalID: -1299968856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard12
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 70
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8bb01a84d27f0479fe60e5fd0dac8a
+      internalID: 1627396650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard13
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 70
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7888d871b6da9440a8a2a552ef1b24e
+      internalID: -1640666070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard14
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 70
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a825fd0ce23551429b119e300a0db3d
+      internalID: -2090385086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard15
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 70
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daecc16e63e4da34aadac83dd251006c
+      internalID: 929637928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkeletonWizard16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 70
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbc1b6dfedfb914794ec5767108fc5e
+      internalID: 1641353208
       vertices: []
       indices: 
       edges: []
@@ -565,6 +901,22 @@ TextureImporter:
       BurningGhoul7: 532628080
       BurningGhoul8: 1790932823
       Characters_1: -717621059
+      SkeletonWizard1: -612452197
+      SkeletonWizard10: -635889098
+      SkeletonWizard11: -1299968856
+      SkeletonWizard12: 1627396650
+      SkeletonWizard13: -1640666070
+      SkeletonWizard14: -2090385086
+      SkeletonWizard15: 929637928
+      SkeletonWizard16: 1641353208
+      SkeletonWizard2: 1837285841
+      SkeletonWizard3: -948116788
+      SkeletonWizard4: -47040442
+      SkeletonWizard5: -1740350079
+      SkeletonWizard6: -1328171046
+      SkeletonWizard7: -1986465593
+      SkeletonWizard8: -959067062
+      SkeletonWizard9: -277778771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

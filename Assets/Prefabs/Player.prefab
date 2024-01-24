@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17aab519dbe0d84594d0d37a56308d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DirX: 0
   scale: 4
   speed: 200
   shot: {fileID: 183879515661700690}
@@ -312,10 +311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98843aeac66d9c347a45febee690dacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FasingRight: 0
-  FasingLeft: 0
+  FacingRight: 1
+  FacingLeft: 0
   bullet: {fileID: 3685436500536862957, guid: 3e0be11e1f7f3a848af6081c27132d40, type: 3}
   shotPoint: {fileID: 336703272309634318}
+  bulletVelocity: 8
 --- !u!114 &7637579885556659291
 MonoBehaviour:
   m_ObjectHideFlags: 0
