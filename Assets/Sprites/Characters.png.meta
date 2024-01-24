@@ -816,7 +816,7 @@ TextureImporter:
         width: 38
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -837,7 +837,7 @@ TextureImporter:
         width: 37
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -858,7 +858,7 @@ TextureImporter:
         width: 51
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,6 +866,69 @@ TextureImporter:
       bones: []
       spriteID: fcbc1b6dfedfb914794ec5767108fc5e
       internalID: 1641353208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MagicBall1
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 111
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03eb4606f5f08a8408776c8cd03eab28
+      internalID: 1374230154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MagicBall2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 112
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2967b7e478df554d90938a8ecd7c720
+      internalID: 537916415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MagicBall3
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 112
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fa9bccfc69ce94a9f2d2041bb16b7d
+      internalID: 654630641
       vertices: []
       indices: 
       edges: []
@@ -900,7 +963,9 @@ TextureImporter:
       BurningGhoul6: 1456793560
       BurningGhoul7: 532628080
       BurningGhoul8: 1790932823
-      Characters_1: -717621059
+      MagicBall1: 1374230154
+      MagicBall2: -717621059
+      MagicBall3: 654630641
       SkeletonWizard1: -612452197
       SkeletonWizard10: -635889098
       SkeletonWizard11: -1299968856
