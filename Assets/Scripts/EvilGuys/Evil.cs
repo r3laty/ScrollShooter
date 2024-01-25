@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class Evil : MonoBehaviour
 {
-    [SerializeField] private float health;
+    public float Health;
+
+    private float _currentHp;
+    private void Start()
+    {
+        _currentHp = Health;
+    }
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
-        if (health <= 0)
+        _currentHp -= damage;
+        if (_currentHp <= 0)
         {
             Destroy(gameObject);
         }

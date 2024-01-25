@@ -20,6 +20,14 @@ public class Ball : MonoBehaviour
             {
                 hitInfo.collider.GetComponent<Evil>().TakeDamage(damage);
             }
+            if (hitInfo.collider.CompareTag("Boss_phase1"))
+            {
+                if (Phase1.Reforged)
+                {
+                    hitInfo.collider.GetComponent<Phase1>().BreakShield(damage);
+                }
+                hitInfo.collider.GetComponent<Evil>().TakeDamage(damage);
+            }
             Destroy(gameObject);
         }
     }
