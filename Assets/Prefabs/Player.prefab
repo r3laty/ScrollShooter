@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 7637579885556659291}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.06, y: 1.96, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5365630153827835403}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17aab519dbe0d84594d0d37a56308d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 4
+  scale: 3
   speed: 200
   shot: {fileID: 183879515661700690}
 --- !u!114 &400682174927206203
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c912d279ae3fec545a3f010428adca4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 100
+  jumpForce: 125
 --- !u!114 &4026996989531701041
 MonoBehaviour:
   m_ObjectHideFlags: 0

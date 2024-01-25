@@ -7,7 +7,6 @@ public class CheckIsGrounded : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IsGroundedUpate(collision, true);
-        print(collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
