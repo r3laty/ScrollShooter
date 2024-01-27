@@ -17,10 +17,18 @@ public class Animations : MonoBehaviour
         {
             _animator.SetBool("IsMoving", true);
         }
+
         if (Move.DirX < 0)
         {
             _animator.SetBool("IsMoving", true);
         }
+
+        if(Die.IsDied)
+        {
+            print("You were died!");
+            //_animator.SetBool("IsDead", true);
+        }
+
         if (Move.DirX == 0)
         {
             foreach (AnimatorControllerParameter parameter in _animator_parametres)   //Disable all animations

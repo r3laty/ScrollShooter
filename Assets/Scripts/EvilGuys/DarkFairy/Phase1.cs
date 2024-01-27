@@ -2,11 +2,10 @@ using System.Collections;
 using UnityEngine;
 public class Phase1 : Boss
 {
-    [HideInInspector] public float AdditionalHp = 20;
+    public float AdditionalHp = 20;
 
     public static bool Reforged;
 
-    [SerializeField] private Evil bossHp;
     [SerializeField] private float timeToShield = 8;
     private void Start()
     {

@@ -9,12 +9,12 @@ public class Move : MonoBehaviour
 
     [SerializeField] private float speed = 5;
 
-    [SerializeField] private MakeShot shot;
-
+    private MakeShot _shot;
     private Rigidbody2D _rb;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _shot = GetComponent<MakeShot>();
     }
 
     private void Update()
@@ -33,14 +33,14 @@ public class Move : MonoBehaviour
         if (DirX > 0)
         {
             transform.localScale = new Vector3(scale, scale, 0);
-            shot.FacingRight = true;
-            shot.FacingLeft = false;
+            _shot.FacingRight = true;
+            _shot.FacingLeft = false;
         }
         else if (DirX < 0)
         {
             transform.localScale = new Vector3(-scale, scale, 0);
-            shot.FacingRight = false;
-            shot.FacingLeft = true;
+            _shot.FacingRight = false;
+            _shot.FacingLeft = true;
         }
     }
 }

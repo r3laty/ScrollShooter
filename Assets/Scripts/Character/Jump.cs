@@ -2,6 +2,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Jump : MonoBehaviour
 {
+
     [SerializeField] private float jumpForce = 5;
 
     private CheckIsGrounded _isGrounded;

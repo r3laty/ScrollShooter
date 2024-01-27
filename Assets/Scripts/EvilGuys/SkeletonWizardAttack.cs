@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class DamageDealer : MonoBehaviour
+public class SkeletonWizardAttack : MonoBehaviour
 {
     [SerializeField] private GameObject rocket;
     [SerializeField] private float lifetime = 2;
@@ -18,8 +18,10 @@ public class DamageDealer : MonoBehaviour
         {
             GameObject newRocket = Instantiate(rocket, shotPoint.position, Quaternion.identity);
             newRocket.GetComponent<Rigidbody2D>().AddForce(-transform.right * rocketVelocity, ForceMode2D.Impulse);
+
             yield return new WaitForSeconds(lifetime);
             Destroy(newRocket);
+            
             yield return new WaitForSeconds(interval);
         }
     }

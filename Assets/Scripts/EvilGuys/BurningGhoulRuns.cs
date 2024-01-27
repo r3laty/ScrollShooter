@@ -6,6 +6,8 @@ public class BurningGhoulRuns : MonoBehaviour
     [SerializeField] private Transform rightLimit;
     [SerializeField] private float speed;
     [SerializeField] private float scale;
+    [Space]
+    [SerializeField] private float damage = 5;
 
     private bool _goLeft = true;
     private bool _goRight = false;
@@ -47,6 +49,14 @@ public class BurningGhoulRuns : MonoBehaviour
         else if (side.ToLower() == "right")
         {
             transform.localScale = new Vector3(-scale, scale, 0);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.collider.GetComponent<Die>().TakeDamage(damage);
         }
     }
 
