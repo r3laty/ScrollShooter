@@ -13,7 +13,5 @@ public class Health : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         currentHp -= damage;
-
-        Debug.Log(currentHp + " hp");
     }
 }
