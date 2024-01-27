@@ -160,6 +160,7 @@ MonoBehaviour:
   rightLimit: {fileID: 6523462195006205003}
   speed: 2
   scale: 5
+  damage: 5
 --- !u!114 &441964431352983513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7316a6e1a148140aa3c0e4f439a8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 30
+  MaxHealth: 30
 --- !u!1 &3386075072434629170
 GameObject:
   m_ObjectHideFlags: 0

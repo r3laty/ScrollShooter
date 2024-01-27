@@ -4,16 +4,16 @@ public class Health : MonoBehaviour
 {
     public float MaxHealth;
 
-    protected float _currentHp;
+    [HideInInspector] public float currentHp;
     private void Start()
     {
-        _currentHp = MaxHealth;
+        currentHp = MaxHealth;
     }
 
     public virtual void TakeDamage(float damage)
     {
-        _currentHp -= damage;
+        currentHp -= damage;
 
-        Debug.Log(_currentHp + " hp");
+        Debug.Log(currentHp + " hp");
     }
 }
