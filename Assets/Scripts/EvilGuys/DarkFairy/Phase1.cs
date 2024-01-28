@@ -6,36 +6,58 @@ public class Phase1 : Boss
 
     public static bool Reforged;
 
-    [SerializeField] private float timeToShield = 8;
+    [SerializeField] private float timeToFight = 8;
+    [SerializeField] private float timeToShield = 4;
+    [Space]
+    [SerializeField] private Animator spellAnim;
+
     private void Start()
     {
-        StartCoroutine(MakingShield());
+        StartCoroutine(StartOfFight());
     }
     public void BreakShield(float damage)
     {
         AdditionalHp -= damage;
         if (AdditionalHp == 0)
         {
-            TurnAnimationOn(BossAnimator, "Hitted", true);
+            TurnAnimation(BossAnimator, "Hitted", true);
             Reforged = false;
         }
     }
-    public void StopAnimation()
+    public void StopShieldAnimations()
     {
-        TurnAnimationOn(BossAnimator, "Created", false);
+        TurnAnimation(BossAnimator, "Created", false);
 
-        TurnAnimationOn(BossAnimator, "Hitted", false);
+        TurnAnimation(BossAnimator, "Hitted", false);
+    }
+    public void CastSpell()
+    {
+        spellAnim.gameObject.SetActive(true);
+
+        TurnAnimation(spellAnim, "Cast", true);
+
+        TurnAnimation(BossAnimator, "Casting", false);
     }
     private void MakeShield()
     {
-        TurnAnimationOn(BossAnimator, "Created", true);
+        TurnAnimation(BossAnimator, "Created", true);
         Reforged = true;
     }
 
-    private IEnumerator MakingShield()
+    private void SpellAttack()
     {
-        yield return new WaitForSeconds(timeToShield);
-        MakeShield();
+        TurnAnimation(BossAnimator, "Casting", true);
     }
-    
+
+    private IEnumerator StartOfFight()
+    {
+        yield return new WaitForSeconds(timeToFight);
+        while (true)
+        {
+            SpellAttack();
+            yield return new WaitForSeconds(timeToShield);
+            MakeShield();
+        }
+    }
+
 }

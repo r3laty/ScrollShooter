@@ -7,6 +7,6 @@ public class HpBar : MonoBehaviour
     [SerializeField] private Die playerHealth;
     private void Update()
     {
-        bar.fillAmount = playerHealth.currentHp / 50;
+        bar.fillAmount = playerHealth.currentHp / 100;
     }
 }

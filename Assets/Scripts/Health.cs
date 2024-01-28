@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float MaxHealth;
+    public static bool Dead;
 
-    [HideInInspector] public float currentHp;
+    public float currentHp;
     private void Start()
     {
-        currentHp = MaxHealth;
+        Dead = false;
     }
 
     public virtual void TakeDamage(float damage)
     {
         currentHp -= damage;
+        Dead = true;
     }
 }

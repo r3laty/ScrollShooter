@@ -126,8 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae411983dbaa7243baef18ae030491d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
-  distanceOfRaycast: 0.8
+  damage: 15
 --- !u!58 &-7965261072904671737
 CircleCollider2D:
   m_ObjectHideFlags: 0
