@@ -1,18 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HpBar : MonoBehaviour
+public class BossHpBar : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] private Die playerHealth;
+    [SerializeField] private Evil bossHp;
 
     private float _maxHp;
     private void Start()
     {
-        _maxHp = playerHealth.currentHp;
+        _maxHp = bossHp.currentHp;
     }
     private void Update()
     {
-        bar.fillAmount = playerHealth.currentHp / _maxHp;
+        bar.fillAmount = bossHp.currentHp / _maxHp;
     }
 }

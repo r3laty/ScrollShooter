@@ -7,7 +7,7 @@ public class Phase1 : Boss
     public static bool Reforged;
 
     [SerializeField] private float timeToFight = 8;
-    [SerializeField] private float timeToShield = 4;
+    [SerializeField] private float timeToNextAttack = 4;
     [Space]
     [SerializeField] private Animator spellAnim;
 
@@ -52,11 +52,13 @@ public class Phase1 : Boss
     private IEnumerator StartOfFight()
     {
         yield return new WaitForSeconds(timeToFight);
+        SpellAttack();
+        yield return new WaitForSeconds(timeToNextAttack);
+        MakeShield();
         while (true)
         {
+            yield return new WaitForSeconds(timeToNextAttack);
             SpellAttack();
-            yield return new WaitForSeconds(timeToShield);
-            MakeShield();
         }
     }
 
