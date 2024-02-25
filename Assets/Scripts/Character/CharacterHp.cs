@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Die : Health
+public class CharacterHp : Health
 {
     public static bool IsDied;
 

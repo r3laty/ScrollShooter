@@ -1,6 +1,5 @@
 using UnityEngine;
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(Move))]
 public class Animations : MonoBehaviour
 {
     private Animator _animator;
@@ -9,35 +8,40 @@ public class Animations : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        _animator_parametres = _animator.parameters;
     }
     private void Update()
     {
         if (Move.DirX > 0)
         {
-            _animator.SetBool("IsMoving", true);
+            _animator.SetBool("IsMoving", true); 
         }
 
-        if (Move.DirX < 0)
+        else if (Move.DirX < 0)
         {
             _animator.SetBool("IsMoving", true);
         }
 
-        if(Die.IsDied)
+        else if (Move.DirX == 0)
         {
-            print("You were died!");
-            //_animator.SetBool("IsDead", true);
+            _animator.SetBool("IsMoving", false);
         }
 
-        if (Move.DirX == 0)
+        if (GetFireInput.SphereAttacked)
         {
-            foreach (AnimatorControllerParameter parameter in _animator_parametres)   //Disable all animations
-            {
-                if (parameter.type == AnimatorControllerParameterType.Bool)
-                {
-                    _animator.SetBool(parameter.name, false);
-                }
-            }
+            _animator.SetBool("IsSphereAttack", true);
+        }
+        else if (!GetFireInput.SphereAttacked)
+        {
+            _animator.SetBool("IsSphereAttack", false);
+        }
+
+        if (GetFireInput.BowAttacked)
+        {
+            _animator.SetBool("IsMagicBowAttack", true);
+        }
+        else if (!GetFireInput.BowAttacked)
+        {
+            _animator.SetBool("IsMagicBowAttack", false);
         }
     }
 }

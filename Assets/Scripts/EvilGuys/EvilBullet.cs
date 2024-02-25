@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EvilMagicBall : MonoBehaviour
+public class EvilBullet : MonoBehaviour
 {
     [SerializeField] private float damage = 5;
 
@@ -8,7 +8,7 @@ public class EvilMagicBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<Die>().TakeDamage(damage);
+            collision.GetComponent<CharacterHp>().TakeDamage(damage);
         }
     }
 }

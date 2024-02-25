@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Healing : MonoBehaviour
 {
-    [SerializeField] private Die playerHp;
+    [SerializeField] private CharacterHp playerHp;
     [SerializeField] private GameObject tipText;
 
     [SerializeField] private float howMuchToHeal = 15;

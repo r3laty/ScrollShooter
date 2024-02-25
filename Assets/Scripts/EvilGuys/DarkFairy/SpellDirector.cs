@@ -5,16 +5,16 @@ public class SpellDirector : MonoBehaviour
     [SerializeField] private float damage = 25;
 
     private Animator _spellAnim;
-    private Die _playerHp;
+    private CharacterHp _playerHp;
     private void Awake()
     {
-        _playerHp = GetComponentInParent<Die>();
+        _playerHp = GetComponentInParent<CharacterHp>();
         _spellAnim = GetComponent<Animator>();
     }
     public void EndOfSpell()
     {
         _spellAnim.SetBool("Cast", false);
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
         _playerHp.currentHp -= damage;
     }
 }

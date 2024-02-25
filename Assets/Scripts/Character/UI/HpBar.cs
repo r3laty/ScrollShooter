@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HpBar : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] private Die playerHealth;
+    [SerializeField] private CharacterHp playerHealth;
 
     private float _maxHp;
     private void Start()

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class BossHpBar : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] private Evil bossHp;
+    [SerializeField] private BossHp bossHp;
 
     private float _maxHp;
     private void Start()

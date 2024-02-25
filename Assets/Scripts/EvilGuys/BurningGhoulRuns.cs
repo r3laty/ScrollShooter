@@ -56,7 +56,7 @@ public class BurningGhoulRuns : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.collider.GetComponent<Die>().TakeDamage(damage);
+            collision.collider.GetComponent<CharacterHp>().TakeDamage(damage);
         }
     }
 
