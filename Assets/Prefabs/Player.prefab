@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4451469392742603267
 Transform:
   m_ObjectHideFlags: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723e16fe6f4465940bdf06955cc94140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSpellAttack: 0
   damage: 25
 --- !u!1 &6518480721113337411
 GameObject:
@@ -458,8 +459,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FacingRight: 1
   FacingLeft: 0
-  bullet: {fileID: 3685436500536862957, guid: 3e0be11e1f7f3a848af6081c27132d40, type: 3}
-  bullet2: {fileID: 6432401901219180735, guid: dd4961ef3d109574d8042cdd7c505a64, type: 3}
+  sphere: {fileID: 0}
+  arrow: {fileID: 0}
   shotPoint: {fileID: 336703272309634318}
   bulletVelocity: 8
 --- !u!114 &6811027635273143345

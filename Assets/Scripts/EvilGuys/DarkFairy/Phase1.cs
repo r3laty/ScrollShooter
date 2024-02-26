@@ -1,64 +1,76 @@
 using System.Collections;
 using UnityEngine;
-public class Phase1 : Boss
+public class Phase1 : MonoBehaviour
 {
     public float AdditionalHp = 20;
 
     public static bool Reforged;
 
+    [SerializeField] private Animator bossAnim;
+    [Space]
     [SerializeField] private float timeToFight = 8;
     [SerializeField] private float timeToNextAttack = 4;
     [Space]
+    [SerializeField] private SpellDirector spellDirector;
     [SerializeField] private Animator spellAnim;
 
     private void Start()
     {
-        StartCoroutine(StartOfFight());
+        StartCoroutine(StartOfBossFight());
+    }
+    private void Update()
+    {
+        
     }
     public void BreakShield(float damage)
     {
         AdditionalHp -= damage;
-        if (AdditionalHp == 0)
+        Debug.Log(AdditionalHp + " Addition hp");
+
+        if (AdditionalHp <= 0)
         {
-            TurnAnimation(BossAnimator, "Hitted", true);
+            StopShieldAnimations();
             Reforged = false;
         }
     }
-    public void StopShieldAnimations()
+    public void SpellAtttack()
     {
-        TurnAnimation(BossAnimator, "Created", false);
+        spellDirector.IsSpellAttack = true;
 
-        TurnAnimation(BossAnimator, "Hitted", false);
+        bossAnim.SetBool("Casting", false);
+
+        spellAnim.SetBool("Cast", true);
     }
-    public void CastSpell()
+    public void BackToIdle()
     {
-        spellAnim.gameObject.SetActive(true);
-
-        TurnAnimation(spellAnim, "Cast", true);
-
-        TurnAnimation(BossAnimator, "Casting", false);
+        bossAnim.SetBool("Hitted", false);
+    }
+    private void StopShieldAnimations()
+    {
+        bossAnim.SetBool("Created", false);
+        bossAnim.SetBool("Hitted", true);
     }
     private void MakeShield()
     {
-        TurnAnimation(BossAnimator, "Created", true);
+        bossAnim.SetBool("Created", true);
         Reforged = true;
     }
 
-    private void SpellAttack()
+    private void CastingSpell()
     {
-        TurnAnimation(BossAnimator, "Casting", true);
+        bossAnim.SetBool("Casting", true);
     }
 
-    private IEnumerator StartOfFight()
+    private IEnumerator StartOfBossFight()
     {
         yield return new WaitForSeconds(timeToFight);
-        SpellAttack();
+        CastingSpell();
         yield return new WaitForSeconds(timeToNextAttack);
         MakeShield();
         while (true)
         {
             yield return new WaitForSeconds(timeToNextAttack);
-            SpellAttack();
+            CastingSpell();
         }
     }
 

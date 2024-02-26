@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossHpBar : MonoBehaviour
+public class ShieldHp : MonoBehaviour
 {
     [SerializeField] private Image bar;
-    [SerializeField] private BossHp bossHp;
+    [SerializeField] private Phase1 shieldHp;
 
     private float _maxHp;
     private void Start()
     {
-        _maxHp = bossHp.currentHp;
+        _maxHp = shieldHp.AdditionalHp;
     }
     private void Update()
     {
-        bar.fillAmount = bossHp.currentHp / _maxHp;
+        bar.fillAmount = shieldHp.AdditionalHp / _maxHp;
 
-        if (bossHp.currentHp <= 0)
+        if (shieldHp.AdditionalHp <= 0)
         {
             bar.gameObject.SetActive(false);
         }

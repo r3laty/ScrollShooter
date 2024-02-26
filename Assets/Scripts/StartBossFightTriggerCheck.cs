@@ -9,6 +9,7 @@ public class StartBossFightTriggerCheck : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            bossSpell.SetActive(true);
             bossController.enabled = true;
             bossHpBar.SetActive(true);
         }

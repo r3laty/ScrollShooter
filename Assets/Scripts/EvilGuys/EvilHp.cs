@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Evil : Health
+public class EvilHp : Health
 {
     public override void TakeDamage(float damage)
     {

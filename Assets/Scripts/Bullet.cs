@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -12,7 +11,7 @@ public class Bullet : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Enemy"))
             {
-                hitInfo.collider.GetComponent<Evil>().TakeDamage(damage);
+                hitInfo.collider.GetComponent<EvilHp>().TakeDamage(damage);
             }
             if (hitInfo.collider.CompareTag("Boss_phase1"))
             {
@@ -20,7 +19,10 @@ public class Bullet : MonoBehaviour
                 {
                     hitInfo.collider.GetComponent<Phase1>().BreakShield(damage);
                 }
-                hitInfo.collider.GetComponent<BossHp>().TakeDamage(damage);
+                else
+                {
+                    hitInfo.collider.GetComponent<BossHp>().TakeDamage(damage);
+                }
             }
             Destroy(gameObject);
         }

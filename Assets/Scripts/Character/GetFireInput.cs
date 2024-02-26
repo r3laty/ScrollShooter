@@ -4,6 +4,8 @@ public class GetFireInput : MonoBehaviour
     public static bool SphereAttacked;
     public static bool BowAttacked;
 
+    [SerializeField] private BossHp bossHp;
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -15,7 +17,7 @@ public class GetFireInput : MonoBehaviour
             SphereAttacked = false;
         }
         
-        if (BossHp.KilledBoss && Input.GetButtonDown("Fire2"))
+        if (bossHp.currentHp <= 0 && Input.GetButtonDown("Fire2"))
         {
             BowAttacked = true;
         }
