@@ -7,6 +7,8 @@ public class SpellDirector : MonoBehaviour
 
     [SerializeField] private float damage = 25;
 
+    [SerializeField] private Phase PhaseOfBoss;
+
     private Animator _spellAnim;
     private CharacterHp _playerHp;
     private Transform _player;
@@ -23,7 +25,7 @@ public class SpellDirector : MonoBehaviour
             gameObject.transform.position = _player.position;
             gameObject.transform.SetParent(_player);
         }
-        
+
         if (IsSpellAttack)
         {
             gameObject.transform.SetParent(null);
@@ -32,7 +34,14 @@ public class SpellDirector : MonoBehaviour
     public void EndOfSpell()
     {
         IsSpellAttack = false;
-        _spellAnim.SetBool("Cast", false);
+        if (PhaseOfBoss == Phase.First)
+        {
+            _spellAnim.SetBool("Cast_phase1", false);
+        }
+        else if (PhaseOfBoss == Phase.Second)
+        {
+            _spellAnim.SetBool("Cast_phase2", false);
+        }
 
         RaycastHit2D hit;
         Vector2 direction = -transform.up;
@@ -48,4 +57,9 @@ public class SpellDirector : MonoBehaviour
             }
         }
     }
+}
+enum Phase
+{
+    First,
+    Second
 }

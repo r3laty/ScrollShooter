@@ -24,6 +24,10 @@ public class Bullet : MonoBehaviour
                     hitInfo.collider.GetComponent<BossHp>().TakeDamage(damage);
                 }
             }
+            if (hitInfo.collider.CompareTag("Boss_phase2"))
+            {
+                hitInfo.collider.GetComponent<BossHp>().TakeDamage(damage);
+            }
             Destroy(gameObject);
         }
     }

@@ -6,26 +6,21 @@ public class Phase1 : MonoBehaviour
 
     public static bool Reforged;
 
-    [SerializeField] private Animator bossAnim;
+    [SerializeField] protected Animator bossAnim;
     [Space]
-    [SerializeField] private float timeToFight = 8;
-    [SerializeField] private float timeToNextAttack = 4;
+    [SerializeField] protected float timeToFight = 8;
+    [SerializeField] protected float timeToNextAttack = 4;
     [Space]
-    [SerializeField] private SpellDirector spellDirector;
-    [SerializeField] private Animator spellAnim;
+    [SerializeField] protected SpellDirector spellDirector;
+    [SerializeField] protected Animator spellAnim;
 
     private void Start()
     {
         StartCoroutine(StartOfBossFight());
     }
-    private void Update()
-    {
-        
-    }
     public void BreakShield(float damage)
     {
         AdditionalHp -= damage;
-        Debug.Log(AdditionalHp + " Addition hp");
 
         if (AdditionalHp <= 0)
         {
@@ -39,7 +34,7 @@ public class Phase1 : MonoBehaviour
 
         bossAnim.SetBool("Casting", false);
 
-        spellAnim.SetBool("Cast", true);
+        spellAnim.SetBool("Cast_phase1", true);
     }
     public void BackToIdle()
     {

@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class ShowTipAboutNewType : MonoBehaviour
 {
-    [HideInInspector] public bool BossKilled;
+    [SerializeField] private BossHp bossHp;
 
     [SerializeField] private GameObject tipText;
     [SerializeField] private float tipDuration = 2;
+
+    private bool _killed;
     private void Update()
     {
-        if (BossKilled)
+        if (bossHp.BossKilled)
         {
             StartCoroutine(ShowTip());
         }
@@ -24,6 +26,6 @@ public class ShowTipAboutNewType : MonoBehaviour
         yield return new WaitForSeconds(tipDuration);
         print("tip corutine working!");
         tipText.SetActive(false);
-        BossKilled = false;
+        bossHp.BossKilled = false;
     }
 }
