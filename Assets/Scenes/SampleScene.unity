@@ -7584,6 +7584,9 @@ MonoBehaviour:
   timeToNextAttack: 4
   spellDirector: {fileID: 1402205495}
   spellAnim: {fileID: 1402205497}
+  explosionForce: 5
+  explosionRadius: 12
+  explosionDamage: 45
 --- !u!70 &881564436
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
