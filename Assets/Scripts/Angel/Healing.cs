@@ -20,7 +20,7 @@ public class Healing : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(tipText);
+            tipText.SetActive(false);
             _came = false;
         }
     }
@@ -28,11 +28,17 @@ public class Healing : MonoBehaviour
     {
         if (_came)
         {
+            print(Input.GetKeyDown(KeyCode.E) + " Key down");
+            print(Input.GetKeyUp(KeyCode.E) + " Key up");
             tipText.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
                 playerHp.currentHp = playerHp.currentHp + howMuchToHeal;
+                if (playerHp.currentHp <= 100)
+                {
+                    howMuchToHeal = 0;
+                }
             }
             else if (Input.GetKeyUp(KeyCode.E))
             {

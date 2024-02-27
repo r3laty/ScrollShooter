@@ -8,7 +8,7 @@ public class BossHp : Health
         base.TakeDamage(damage);
         if (currentHp <= 0)
         {
-            StartCoroutine(tipController.ShowTip());
+            tipController.BossKilled = true;
             Destroy(gameObject);
         }
     }
