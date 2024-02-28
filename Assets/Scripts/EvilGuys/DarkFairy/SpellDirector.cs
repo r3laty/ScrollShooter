@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class SpellDirector : MonoBehaviour
@@ -53,13 +52,8 @@ public class SpellDirector : MonoBehaviour
         {
             if (hit.collider.CompareTag("Player"))
             {
-                _playerHp.currentHp -= damage;
+                _playerHp.TakeDamage(damage);
             }
         }
     }
-}
-enum Phase
-{
-    First,
-    Second
 }
