@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Phase2 : Phase1
 {
-    [SerializeField] private float explosionForce = 5;
+    [Space]
     [SerializeField] private float explosionRadius = 3;
     [SerializeField] private float explosionDamage = 45;
     private void Start()
@@ -22,6 +22,20 @@ public class Phase2 : Phase1
     {
         bossAnim.SetBool("Explode", false);
     }
+    public void DamageOfExplosion()
+    {
+        Collider2D[] overlappedColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+
+        foreach (Collider2D collider in overlappedColliders)
+        {
+            CharacterHp characterHp = collider.GetComponent<CharacterHp>();
+            if (characterHp != null)
+            {
+                characterHp.TakeDamage(explosionDamage);
+                Debug.Log(characterHp.name + " character hp found");
+            }
+        }
+    }
 
     private void CastingSpell()
     {
@@ -30,24 +44,6 @@ public class Phase2 : Phase1
     private void Explode()
     {
         bossAnim.SetBool("Explode", true);
-        Collider2D[] overlappedColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
-
-        foreach (Collider2D collider in overlappedColliders)
-        {
-            Rigidbody2D rigidbody = collider.attachedRigidbody;
-            if (rigidbody)
-            {
-                Vector2 direction = rigidbody.position - (Vector2)transform.position;
-                rigidbody.AddForce(direction.normalized * explosionForce, ForceMode2D.Impulse);
-            }
-
-            CharacterHp characterHp = collider.GetComponent<CharacterHp>();
-            if (characterHp != null)
-            {
-                characterHp.TakeDamage(explosionDamage);
-                Debug.Log(characterHp.name + " character hp found");
-            }
-        }
     }
     private IEnumerator StartOfBossFight()
     {
