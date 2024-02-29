@@ -6792,7 +6792,7 @@ GameObject:
   - component: {fileID: 520979209}
   m_Layer: 5
   m_Name: BossHpBar_Phase2
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7192,7 +7192,7 @@ GameObject:
   - component: {fileID: 688310236}
   m_Layer: 5
   m_Name: PauseButton
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7275,6 +7275,18 @@ MonoBehaviour:
       - m_Target: {fileID: 688310234}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8344953656589203724}
+        m_TargetAssemblyTypeName: GetFireInput, Assembly-CSharp
+        m_MethodName: SetCanShoot
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8166,7 +8178,7 @@ GameObject:
   - component: {fileID: 1203325953}
   m_Layer: 5
   m_Name: TipAboutNewTypeOfAttackText
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8588,7 +8600,7 @@ GameObject:
   - component: {fileID: 1302202243}
   m_Layer: 5
   m_Name: 'TipForHealText '
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8722,6 +8734,7 @@ GameObject:
   - component: {fileID: 1335137785}
   - component: {fileID: 1335137784}
   - component: {fileID: 1335137783}
+  - component: {fileID: 1335137786}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8779,6 +8792,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335137786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335137782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc096efa7f3da6443bf5f58c490f0b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1402205493
 GameObject:
   m_ObjectHideFlags: 0
@@ -9557,7 +9582,7 @@ GameObject:
   - component: {fileID: 1707928798}
   m_Layer: 5
   m_Name: HpBar
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13359,7 +13384,7 @@ GameObject:
   - component: {fileID: 1983977863}
   m_Layer: 5
   m_Name: PauseMenu
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13583,6 +13608,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8344953656589203724}
+        m_TargetAssemblyTypeName: GetFireInput, Assembly-CSharp
+        m_MethodName: SetCanShoot
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1986948635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13725,7 +13762,7 @@ GameObject:
   - component: {fileID: 2044557457}
   m_Layer: 5
   m_Name: WinMenu
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13835,7 +13872,7 @@ GameObject:
   - component: {fileID: 2097760428}
   m_Layer: 5
   m_Name: BossHpBar
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15427,6 +15464,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3466698006477572921, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
   m_PrefabInstance: {fileID: 336471082626696137}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8344953656589203724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4175746627426336557, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
+  m_PrefabInstance: {fileID: 336471082626696137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4665c96af7ac8154ebae2fc136f8d530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8452293008981761476
 GameObject:
   m_ObjectHideFlags: 0

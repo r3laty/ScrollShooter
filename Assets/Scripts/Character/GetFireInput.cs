@@ -8,7 +8,7 @@ public class GetFireInput : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (!GetMousePos.OverUI && Input.GetButtonDown("Fire1"))
         {
             SphereAttacked = true;
         }

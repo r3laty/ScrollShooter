@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Boss_phase1
   - Boss_phase2
+  - UI
   layers:
   - Default
   - TransparentFX
