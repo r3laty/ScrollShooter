@@ -24,7 +24,6 @@ public class ShowTipAboutNewType : MonoBehaviour
     {
         tipText.SetActive(true);
         yield return new WaitForSeconds(tipDuration);
-        print("tip corutine working!");
         tipText.SetActive(false);
         bossHp.BossKilled = false;
     }

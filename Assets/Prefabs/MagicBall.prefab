@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63283b2237d7e6478f7afc8175f11de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 1.5
   damage: 10
   distanceOfRaycast: 0.8
 --- !u!50 &1839573293262109478

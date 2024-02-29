@@ -18,12 +18,10 @@ public class GetMousePos : MonoBehaviour
         if (IsPointerOverUIElement(GetEventSystemRaycastResults()))
         {
             OverUI = true;
-            print("Over UI");
         }
         else
         {
             OverUI = false;
-            print("Not over UI");
         }
     }
 

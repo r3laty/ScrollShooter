@@ -19,4 +19,8 @@ public class PauseController : MonoBehaviour
     {
         SceneManager.LoadScene(menuSceneIndex);
     }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

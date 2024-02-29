@@ -7,7 +7,6 @@ public class CharacterHp : Health
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
-        print(currentHp + " character hp");
         if (currentHp <= 0)
         {
             IsDied = true;

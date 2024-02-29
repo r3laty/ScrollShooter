@@ -28,8 +28,6 @@ public class Healing : MonoBehaviour
     {
         if (_came)
         {
-            print(Input.GetKeyDown(KeyCode.E) + " Key down");
-            print(Input.GetKeyUp(KeyCode.E) + " Key up");
             tipText.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
