@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class Healing : MonoBehaviour
 {
+    public static event Action Healed;
+
     [SerializeField] private CharacterHp playerHp;
     [SerializeField] private GameObject tipText;
 
@@ -30,9 +33,10 @@ public class Healing : MonoBehaviour
         {
             tipText.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && tipText)
             {
                 playerHp.currentHp = playerHp.currentHp + howMuchToHeal;
+                Healed?.Invoke();
                 if (playerHp.currentHp <= 100)
                 {
                     howMuchToHeal = 0;
@@ -40,7 +44,8 @@ public class Healing : MonoBehaviour
             }
             else if (Input.GetKeyUp(KeyCode.E))
             {
-                tipText.SetActive(false);
+                Destroy(tipText);
+                Destroy(gameObject);
             }
         }
     }

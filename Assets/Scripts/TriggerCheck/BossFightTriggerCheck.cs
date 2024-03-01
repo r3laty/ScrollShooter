@@ -1,11 +1,13 @@
+using System;
 using UnityEngine;
 
 public class BossFightTriggerCheck : MonoBehaviour
 {
+    public static event Action EnteredToBossArea;
+
     [SerializeField] private Phase1 bossController;
     [SerializeField] private GameObject bossSpell;
     [SerializeField] private GameObject bossHpBar;
-
     private void OnEnable()
     {
         BossHp.BossDied += OnDied;
@@ -21,6 +23,7 @@ public class BossFightTriggerCheck : MonoBehaviour
             bossSpell.SetActive(true);
             bossController.enabled = true;
             bossHpBar.SetActive(true);
+            EnteredToBossArea?.Invoke();
         }
     }
 
