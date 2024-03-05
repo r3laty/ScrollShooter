@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Healing : MonoBehaviour
 {
-    public static event Action Healed;
+    public static Action Healed;
 
     [SerializeField] private CharacterHp playerHp;
     [SerializeField] private GameObject tipText;
 
-    [SerializeField] private float howMuchToHeal = 15;
+    [SerializeField] private int howMuchToHeal = 15;
 
     private bool _came;
 
@@ -16,6 +16,7 @@ public class Healing : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            tipText.SetActive(true);
             _came = true;
         }
     }
@@ -29,18 +30,16 @@ public class Healing : MonoBehaviour
     }
     private void Update()
     {
+        DoHealing();
+    }
+    private void DoHealing()
+    {
         if (_came)
         {
-            tipText.SetActive(true);
-
             if (Input.GetKeyDown(KeyCode.E) && tipText)
             {
-                playerHp.currentHp = playerHp.currentHp + howMuchToHeal;
                 Healed?.Invoke();
-                if (playerHp.currentHp <= 100)
-                {
-                    howMuchToHeal = 0;
-                }
+                playerHp.Heal(howMuchToHeal);
             }
             else if (Input.GetKeyUp(KeyCode.E))
             {
