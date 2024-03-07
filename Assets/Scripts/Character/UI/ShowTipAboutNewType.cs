@@ -7,8 +7,16 @@ public class ShowTipAboutNewType : MonoBehaviour
 
     [SerializeField] private GameObject tipText;
     [SerializeField] private float tipDuration = 2;
-
-    private bool _killed;
+    [Space]
+    [SerializeField] private Item newType;
+    private void OnEnable()
+    {
+        BossHp.BossDied += OnKilled;
+    }
+    private void OnDisable()
+    {
+        BossHp.BossDied -= OnKilled;
+    }
     private void Update()
     {
         if (bossHp.BossKilled)
@@ -19,6 +27,10 @@ public class ShowTipAboutNewType : MonoBehaviour
         {
             StopCoroutine(ShowTip());
         }
+    }
+    private void OnKilled()
+    {
+        Inventory.AddItem(newType);
     }
     public IEnumerator ShowTip()
     {
