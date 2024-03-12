@@ -9,6 +9,7 @@ TagManager:
   - Boss_phase1
   - Boss_phase2
   - UI
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Inventory
   - 
   - 
   - 

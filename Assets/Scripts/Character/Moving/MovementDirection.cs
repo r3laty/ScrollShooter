@@ -13,7 +13,7 @@ public class MovementDirection : MonoBehaviour
         if (Move.DirX > 0)
         {
             transform.localScale = new Vector3(scale, scale, 0);
-            _shot.FacingRight = true;
+            _shot.FacingRight = true; 
             _shot.FacingLeft = false;
         }
         else if (Move.DirX < 0)

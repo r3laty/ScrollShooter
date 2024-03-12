@@ -6,15 +6,15 @@ public class CheckIsGrounded : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IsGroundedUpate(collision, true);
+        IsGroundedUpdate(collision, true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        IsGroundedUpate(collision, false);
+        IsGroundedUpdate(collision, false);
     }
 
-    private void IsGroundedUpate(Collider2D collision, bool value)
+    private void IsGroundedUpdate(Collider2D collision, bool value)
     {
         if (collision.gameObject.tag == ("Ground"))
         {

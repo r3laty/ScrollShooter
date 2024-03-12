@@ -25927,8 +25927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 498.889, y: 0}
-  m_SizeDelta: {x: -997.777, y: 0}
+  m_AnchoredPosition: {x: 425.24, y: 0}
+  m_SizeDelta: {x: -850.478, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957694153
 MonoBehaviour:
@@ -25988,8 +25988,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 64, y: 128}
-  m_Spacing: {x: 120, y: 50}
+  m_CellSize: {x: 100, y: 128}
+  m_Spacing: {x: 70, y: 70}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1019900612
@@ -26226,6 +26226,7 @@ GameObject:
   - component: {fileID: 1146355087}
   - component: {fileID: 1146355089}
   - component: {fileID: 1146355088}
+  - component: {fileID: 1146355090}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -26267,6 +26268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetInventory: {fileID: 1146355089}
   itemsPanel: {fileID: 957694152}
+  fontSize: 10
 --- !u!114 &1146355089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26281,6 +26283,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryItems:
   - {fileID: 11400000, guid: 0928db52f3afcd242a86dec4460abf7d, type: 2}
+--- !u!114 &1146355090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146355086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80674a0c1ccd0574f95debe6ec93875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetInventory: {fileID: 1146355089}
+  inventoryLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  raycastDistance: 10
+  itemsPanel: {fileID: 957694152}
 --- !u!1 &1152342203
 GameObject:
   m_ObjectHideFlags: 0
@@ -33662,6 +33682,10 @@ PrefabInstance:
     - target: {fileID: 3594464758745623102, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
       propertyPath: scale
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3594464758745623102, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
+      propertyPath: dashingPower
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3669088053950925805, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
       propertyPath: m_Name
