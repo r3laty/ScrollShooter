@@ -1,13 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+
 public class InventoryWindow : MonoBehaviour
 {
     [SerializeField] private Inventory targetInventory;
     [SerializeField] private RectTransform itemsPanel;
+    [SerializeField] private GameObject canvas;
     [Header("{------Text settings-------}")]
     [SerializeField] private float fontSize = 10;
     private Vector3 _fontPosition = new Vector3(18, -65, 0);
+
+    private EventTrigger.Entry _eventType;
+    
     private void Start()
     {
         Inventory.ItemAdded += OnItemAdded;
@@ -30,10 +36,21 @@ public class InventoryWindow : MonoBehaviour
 
             var sign = new GameObject("Sign");
             sign.transform.SetParent(icon.transform);
-            sign.AddComponent<TextMeshProUGUI>().text = item.Name;
-            sign.GetComponent<TextMeshProUGUI>().fontSize = fontSize;
-            sign.GetComponent<RectTransform>().anchoredPosition3D = _fontPosition;
+            sign.AddComponent<EventTrigger>();
+
+            _eventType = new EventTrigger.Entry();
+            _eventType.eventID = EventTriggerType.PointerEnter;
+            _eventType.callback.AddListener((eventData) => { ConvertDescription(item); });
+
+            sign.GetComponent<EventTrigger>().triggers.Add(_eventType);
         }
+    }
+    public void ConvertDescription(Item currentItem)
+    {
+        var text = new GameObject("Text");
+        text.transform.SetParent(canvas.transform);
+        text.AddComponent<TextMeshProUGUI>().text = currentItem.Name;
+        text.GetComponent<TextMeshProUGUI>().fontSize = fontSize;
     }
     private void OnDisable()
     {
