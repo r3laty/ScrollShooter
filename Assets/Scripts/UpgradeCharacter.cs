@@ -4,17 +4,22 @@ public class UpgradeCharacter : MonoBehaviour
 {
     [SerializeField] private Lvl[] availableToUpgrade;
 
-    [SerializeField ] private float _currentMoney = 1;
+    [SerializeField] private CurrencyCollection currencyCollection;
+    
     private int _currentUpgrade = 0;
-
+    private void Update()
+    {
+        print(currencyCollection.CurrencyCount + " currency count");
+    }
     public void OnClick()
     {
         var Lvl = availableToUpgrade[_currentUpgrade];
-        if (Lvl.CurrentPrice <= _currentMoney)
+        if (Lvl.CurrentPrice <= currencyCollection.CurrencyCount)
         {
             Lvl.LvlIcon.SetActive(true);
+            currencyCollection.CurrencyCount -= Lvl.CurrentPrice;
             Lvl.NextPrice.SetActive(true);
-            _currentUpgrade++; 
+            _currentUpgrade++;
         }
         else
         {

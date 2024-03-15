@@ -6,6 +6,10 @@ public class Phase2 : Phase1
     [Space]
     [SerializeField] private float explosionRadius = 3;
     [SerializeField] private float explosionDamage = 45;
+    private void OnEnable()
+    {
+        BossHp.BossDied += Die; 
+    }
     private void Start()
     {
         StartCoroutine(StartOfBossFight());
@@ -45,6 +49,11 @@ public class Phase2 : Phase1
     {
         bossAnim.SetBool("Explode", true);
     }
+    private void Die()
+    {
+        currencyCollection.CurrencyCount += prizeForKill;
+        currencyCollection.UpdateCurrencyText();
+    }
     private IEnumerator StartOfBossFight()
     {
         yield return new WaitForSeconds(timeToFight);
@@ -57,6 +66,9 @@ public class Phase2 : Phase1
             Explode();
         }
     }
-
+    private void OnDisable()
+    {
+        BossHp.BossDied -= Die;
+    }
 
 }

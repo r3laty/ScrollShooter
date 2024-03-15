@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7756300135448430583}
   - component: {fileID: -7965261072904671737}
   - component: {fileID: 7466252024398123227}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EvilMagicBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

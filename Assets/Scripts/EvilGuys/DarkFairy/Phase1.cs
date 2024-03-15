@@ -13,10 +13,23 @@ public class Phase1 : MonoBehaviour
     [Space]
     [SerializeField] protected SpellDirector spellDirector;
     [SerializeField] protected Animator spellAnim;
+    [Space] 
+    [SerializeField] protected int prizeForKill = 2;
+    [SerializeField] protected CurrencyCollection currencyCollection;
 
+    private BossHp bossHp;
+
+    private void Awake()
+    {
+        bossHp = GetComponent<BossHp>();
+    }
     private void Start()
     {
         StartCoroutine(StartOfBossFight());
+    }
+    private void OnEnable()
+    {
+        BossHp.BossDied += Die;
     }
     public void BreakShield(float damage)
     {
@@ -56,6 +69,12 @@ public class Phase1 : MonoBehaviour
         bossAnim.SetBool("Casting", true);
     }
 
+    private void Die()
+    {
+        currencyCollection.CurrencyCount += prizeForKill;
+        currencyCollection.UpdateCurrencyText();
+    }
+
     private IEnumerator StartOfBossFight()
     {
         yield return new WaitForSeconds(timeToFight);
@@ -67,6 +86,10 @@ public class Phase1 : MonoBehaviour
             yield return new WaitForSeconds(timeToNextAttack);
             CastingSpell();
         }
+    }
+    private void OnDisable()
+    {
+        BossHp.BossDied -= Die;
     }
 
 }

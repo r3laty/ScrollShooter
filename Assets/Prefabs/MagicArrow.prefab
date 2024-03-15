@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1170550380129159035}
   - component: {fileID: 810142204082193301}
   - component: {fileID: -2581563573894104794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MagicArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63283b2237d7e6478f7afc8175f11de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 2
   damage: 15
   distanceOfRaycast: 0.8
 --- !u!50 &-2581563573894104794

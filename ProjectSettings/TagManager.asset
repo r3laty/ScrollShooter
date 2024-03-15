@@ -10,6 +10,7 @@ TagManager:
   - Boss_phase2
   - UI
   - Item
+  - Currency
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Water
   - UI
   - Inventory
-  - 
-  - 
+  - EvilMagic
+  - Magic
   - 
   - 
   - 

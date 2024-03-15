@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5249275949274030802}
   - component: {fileID: 774938292579592290}
   - component: {fileID: 1839573293262109478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MagicBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
