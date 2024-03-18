@@ -8,6 +8,8 @@ public class InventoryWindow : MonoBehaviour
     [SerializeField] private Inventory targetInventory;
     [SerializeField] private RectTransform itemsPanel;
     [SerializeField] private GameObject canvas;
+
+    private Vector3 _iconScale = new Vector3(5, 5, 5);
     [Header("{------Text settings-------}")]
     [SerializeField] private float fontSize = 10;
     private Vector3 _fontPosition = new Vector3(18, -65, 0);
@@ -33,6 +35,7 @@ public class InventoryWindow : MonoBehaviour
             icon.gameObject.layer = 6;
             icon.tag = "Item";
             icon.AddComponent<BoxCollider2D>();
+            icon.transform.localScale = _iconScale;
 
             var sign = new GameObject("Sign");
             sign.transform.SetParent(icon.transform);

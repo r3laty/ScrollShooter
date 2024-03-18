@@ -1701,8 +1701,9 @@ MonoBehaviour:
   - LvlIcon: {fileID: 532298529}
     NextPrice: {fileID: 1978450781}
     CurrentPrice: 3
+  dashMultiplayer: 2
   currencyCollection: {fileID: 8344953656589203734}
-  _currentMoney: 0
+  move: {fileID: 8344953656589203739}
 --- !u!1 &175171818
 GameObject:
   m_ObjectHideFlags: 0
@@ -27276,7 +27277,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 128}
-  m_Spacing: {x: 70, y: 70}
+  m_Spacing: {x: 230, y: 70}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &977702657
@@ -28966,6 +28967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 929741561}
   keyToOpen: 106
+  currencyCountWindow: {fileID: 707226481}
 --- !u!114 &1335137788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28980,6 +28982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 957694151}
   keyToOpen: 105
+  currencyCountWindow: {fileID: 707226481}
 --- !u!1 &1397360324
 GameObject:
   m_ObjectHideFlags: 0
@@ -36712,6 +36715,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3594464758745623102, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
+      propertyPath: dashingPower
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4175746627426336557, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
       propertyPath: bossHp
       value: 
@@ -38143,6 +38150,17 @@ MonoBehaviour:
   CurrencyCount: 0
   howMuchCurrencyLoot: 1
   currencyCount: {fileID: 1805433442}
+--- !u!114 &8344953656589203739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3594464758745623102, guid: 29eac1394c139fc43870f13250e3b743, type: 3}
+  m_PrefabInstance: {fileID: 336471082626696137}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783047302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17aab519dbe0d84594d0d37a56308d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8452293008981761476
 GameObject:
   m_ObjectHideFlags: 0

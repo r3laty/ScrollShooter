@@ -10,7 +10,7 @@ public class Move : MonoBehaviour
 
     [SerializeField] private float speed = 200;
 
-    [SerializeField] private float dashingPower = 5;
+    [SerializeField] private float dashingPower;
 
     private Rigidbody2D _rb;
     private MovementDirection _movementDirection;
@@ -37,7 +37,7 @@ public class Move : MonoBehaviour
     {
         if (_canDash)
         {
-            Vector2 dash = new Vector2(transform.localScale.x * dashingPower, 0);
+            Vector2 dash = new Vector2(transform.localScale.x * dashingPower * Time.fixedDeltaTime, 0);
             transform.Translate(dash);
             _canDash = false;
         }
@@ -48,5 +48,9 @@ public class Move : MonoBehaviour
         }
 
         _movementDirection.Flip(scale);
+    }
+    public void IncreeseDashPower(int multiplier)
+    {
+        dashingPower *= multiplier;
     }
 }
