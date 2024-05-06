@@ -1661,6 +1661,7 @@ GameObject:
   - component: {fileID: 1911746247}
   - component: {fileID: 1911746246}
   - component: {fileID: 1911746249}
+  - component: {fileID: 1911746250}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1731,7 +1732,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aboutAuthorMenu: {fileID: 797276823}
-  gameSceneIndex: 1
+  loadingSceneIndex: 1
+--- !u!114 &1911746250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911746245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73400f61f03ab8f458135799015551bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

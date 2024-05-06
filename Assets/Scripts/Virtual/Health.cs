@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public float currentHp;
+    public float CurrentHp;
 
     public virtual void TakeDamage(float damage)
     {
-        currentHp -= damage;
+        CurrentHp -= damage;
     }
 }

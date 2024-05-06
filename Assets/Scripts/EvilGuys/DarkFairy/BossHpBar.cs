@@ -9,13 +9,13 @@ public class BossHpBar : MonoBehaviour
     private float _maxHp;
     private void Start()
     {
-        _maxHp = bossHp.currentHp;
+        _maxHp = bossHp.CurrentHp;
     }
     private void Update()
     {
-        bar.fillAmount = bossHp.currentHp / _maxHp;
+        bar.fillAmount = bossHp.CurrentHp / _maxHp;
 
-        if (bossHp.currentHp <= 0)
+        if (bossHp.CurrentHp <= 0)
         {
             bar.gameObject.SetActive(false);
         }

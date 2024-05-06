@@ -10,10 +10,11 @@ public class BossHp : Health
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
-        if (currentHp <= 0)
+        if (CurrentHp <= 0)
         {
             BossKilled = true;
             BossDied?.Invoke();
+
             Destroy(gameObject);
         }
 

@@ -2,20 +2,21 @@ using UnityEngine;
 
 public class CharacterHp : Health
 {
-    public static bool IsDied;
+    public bool IsDied;
+
     private float _maxHp;
     private void Start()
     {
-        _maxHp = currentHp;
+        _maxHp = CurrentHp;
     }
     private void Update()
     {
-        print(currentHp.ToString() + " Character health");
+        print(CurrentHp.ToString() + " Character health");
     }
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
-        if (currentHp <= 0)
+        if (CurrentHp <= 0)
         {
             IsDied = true;
             Destroy(gameObject);
@@ -25,10 +26,10 @@ public class CharacterHp : Health
     {
         if (!IsDied)
         {
-            var maxHeal = Mathf.Max(_maxHp - currentHp, 0);
+            var maxHeal = Mathf.Max(_maxHp - CurrentHp, 0);
             var actualHeal = Mathf.Min(maxHeal, healthRestore);
 
-            currentHp += actualHeal;
+            CurrentHp += actualHeal;
         }
     }
 }

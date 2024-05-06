@@ -17,7 +17,7 @@ public class GetFireInput : MonoBehaviour
             SphereAttacked = false;
         }
         
-        if (bossHp.currentHp <= 0 && Input.GetButtonDown("Fire2"))
+        if (bossHp.CurrentHp <= 0 && Input.GetButtonDown("Fire2"))
         {
             BowAttacked = true;
         }

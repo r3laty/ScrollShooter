@@ -9,10 +9,10 @@ public class HpBar : MonoBehaviour
     private float _maxHp;
     private void Start()
     {
-        _maxHp = playerHealth.currentHp;
+        _maxHp = playerHealth.CurrentHp;
     }
     private void Update()
     {
-        bar.fillAmount = playerHealth.currentHp / _maxHp;
+        bar.fillAmount = playerHealth.CurrentHp / _maxHp;
     }
 }

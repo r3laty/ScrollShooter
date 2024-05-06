@@ -19,6 +19,9 @@ public class MusicController : MonoBehaviour
     }
     private void Start()
     {
+        phase1Music.Play();
+        phase1Music.Pause();
+
         mainMusic.Play();
     }
     private void Update()
@@ -32,6 +35,8 @@ public class MusicController : MonoBehaviour
     private void OnPhase1()
     {
         mainMusic.Pause();
+        phase1Music.UnPause();
+
         phase1Music.Play();
     }
     private void OnHealing()

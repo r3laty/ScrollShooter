@@ -5,7 +5,7 @@ public class MenuController : MonoBehaviour
 {
     [SerializeField] private GameObject aboutAuthorMenu;
     [Space]
-    [SerializeField] private int gameSceneIndex;
+    [SerializeField] private int loadingSceneIndex;
     public void OpenAboutAuthorMenu()
     {
         aboutAuthorMenu.SetActive(true);
@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
     }
     public void StartNewGame()
     {
-        SceneManager.LoadScene(gameSceneIndex);
+        SceneManager.LoadScene(loadingSceneIndex);
     }
     public void LeaveFromGame()
     {

@@ -23,6 +23,7 @@ public class BossFightTriggerCheck : MonoBehaviour
             bossSpell.SetActive(true);
             bossController.enabled = true;
             bossHpBar.SetActive(true);
+
             EnteredToBossArea?.Invoke();
         }
     }
