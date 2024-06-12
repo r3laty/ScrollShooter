@@ -1,46 +1,49 @@
  using UnityEngine;
-
+using FMODUnity;
+using FMOD.Studio;
 public class MusicController : MonoBehaviour
 {
-    [SerializeField] private BossHp bossHp;
-    [Space]
-    [SerializeField] private AudioSource mainMusic;
-    [SerializeField] private AudioSource phase1Music;
-    [SerializeField] private AudioSource healingSound;
-    private void OnEnable()
+    public static MusicController Instance;
+
+    [SerializeField] private EventReference bgMusic;
+    private void Awake()
     {
-        BossFightTriggerCheck.EnteredToBossArea += OnPhase1;
-        Healing.Healed += OnHealing;
-    }
-    private void OnDisable()
-    {
-        BossFightTriggerCheck.EnteredToBossArea -= OnPhase1;
-        Healing.Healed -= OnHealing;
+        if (Instance != null)
+        {
+            Debug.Log("Found more than one Music Controller in the scene");
+        }
+        Instance = this;
     }
     private void Start()
     {
-        phase1Music.Play();
-        phase1Music.Pause();
+        MainMusic();
+    }
+    private void MainMusic()
+    {
+        PlayOneShot(bgMusic, transform.position);
 
-        mainMusic.Play();
+        //CreateEventInstance(bgMusic);
+        //if (_rb.velocity.x != 0)
+        //{
+        //    PLAYBACK_STATE playback;
+        //    _eventInstance.getPlaybackState(out playback);
+        //    if (playback.Equals(PLAYBACK_STATE.STOPPED))
+        //    {
+        //        _eventInstance.start();
+        //    }
+        //}
+        //else
+        //{
+        //    _eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //}
     }
-    private void Update()
+    public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
-        if (bossHp.BossKilled)
-        {
-            phase1Music.Pause();
-            mainMusic.UnPause();
-        }
+        RuntimeManager.PlayOneShot(sound, worldPos);
     }
-    private void OnPhase1()
+    public EventInstance CreateEventInstance(EventReference sound)
     {
-        mainMusic.Pause();
-        phase1Music.UnPause();
-
-        phase1Music.Play();
-    }
-    private void OnHealing()
-    {
-        healingSound.Play();            
+        EventInstance instance = RuntimeManager.CreateInstance(sound);
+        return instance;
     }
 }

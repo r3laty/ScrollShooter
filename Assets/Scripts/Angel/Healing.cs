@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using FMODUnity;
 
 public class Healing : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class Healing : MonoBehaviour
 
     [SerializeField] private CharacterHp playerHp;
     [SerializeField] private GameObject tipText;
+    [Space]
+    [SerializeField] private EventReference healingSound;
 
     [SerializeField] private int howMuchToHeal = 15;
 
@@ -38,7 +41,7 @@ public class Healing : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && tipText)
             {
-                Healed?.Invoke();
+                MusicController.Instance.PlayOneShot(healingSound, transform.position);
                 playerHp.Heal(howMuchToHeal);
             }
             else if (Input.GetKeyUp(KeyCode.E))
